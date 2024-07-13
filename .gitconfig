@@ -1,5 +1,5 @@
 [user]
-    name = Jakub Wądrzyk
+    name = Jakub Wadrzyk
     email = 92339252+Shikoqu@users.noreply.github.com
     username = Shikoqu
 [init]
@@ -7,8 +7,6 @@
 [core]
     pager = delta
     editor = kak
-[web]
-    browser = arc
 [interactive]
     diffFilter = delta --color-only
 [delta]
@@ -19,3 +17,23 @@
     conflictstyle = diff3
 [diff]
     colorMoved = default
+[alias]
+    # ! ADD
+    a = add
+    aa = add --all
+    # ! BRANCH
+    b = branch
+    ba = branch -a
+    bd = branch -d
+    bdd = branch -D
+    # ! COMMIT
+    c = commit
+    ca = commit -a
+    cm = commit -m
+    # ! CHECKOUT
+    o = checkout
+    om = checkout main
+    ob = checkout -b
+    # ! STATUS
+    s = status
+    sb = status -s
