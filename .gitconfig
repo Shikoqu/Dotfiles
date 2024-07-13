@@ -2,3 +2,20 @@
     name = Jakub Wądrzyk
     email = 92339252+Shikoqu@users.noreply.github.com
     username = Shikoqu
+[init]
+    defaultBranch = main
+[core]
+    pager = delta
+    editor = kak
+[web]
+    browser = arc
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    side-by-side = true
+[push]
+    default = matching
+[merge]
+    conflictstyle = diff3
+[diff]
+    colorMoved = default
