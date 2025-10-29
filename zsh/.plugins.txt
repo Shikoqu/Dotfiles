@@ -7,4 +7,5 @@ zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-history-substring-search
 
 # cli-tools
-z-shell/zsh-eza
+z-shell/zsh-eza     # requires eza
+# aloxaf/fzf-tab      # requires fzf

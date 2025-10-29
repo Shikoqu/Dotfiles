@@ -10,5 +10,5 @@ fi
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 antidote load $DOTFILES/zsh/.plugins.txt
 
-# To customize prompt, run `p10k configure` or edit ~/.dotfiles/config/p10k.zsh.
-[[ ! -f ~/.dotfiles/config/p10k.zsh ]] || source ~/.dotfiles/config/p10k.zsh
+# To customize prompt, run `p10k configure` or directly edit the file
+[[ ! -f ${ZDOTDIR:-~}/p10k.zsh ]] || source ${ZDOTDIR:-~}/p10k.zsh

@@ -1,0 +1,76 @@
+# cspell:disable
+[metadata]
+# Meant to be used as a base settings file for the rest of profiles
+name = "Global Settings"
+profile = "default"
+parents = []
+
+# --------------------------------------------------
+
+[workbench]
+colorTheme = "Catppuccin Mocha"
+iconTheme = "catppuccin-mocha"
+activityBar.location = "top"
+
+
+[editor]
+fontSize = 13
+fontFamily = "'FiraCode Nerd Font'"
+fontLigatures = true
+
+formatOnSave = true
+formatOnPaste = true
+formatOnType = false
+formatOnSaveMode = "modificationsIfAvailable"
+
+detectIndentation = true
+tabSize = 4
+linkedEditing = true
+
+semanticHighlighting.enabled = true
+
+suggestSelection = "recentlyUsedByPrefix"
+autoClosingOvertype = "always"
+
+# editor.snippets
+tabCompletion = "onlySnippets"
+snippetSuggestions = "none"
+suggest.showSnippets = false
+
+[editor.bracketPairColorization]
+enabled = false
+independentColorPoolPerBracketType = false
+
+[editor.inlayHints]
+enabled = "offUnlessPressed"
+padding = true
+
+[editor.minimap]
+enabled = false
+renderCharacters = false
+
+[explorer]
+confirmDelete = false
+
+[files]
+autoSave = "onFocusChange"
+
+[terminal]
+integrated.fontFamily = "'FiraCode Nerd Font Mono'"
+
+[accessibility.signalOptions]
+volume = 0
+
+# ! ---------- EXTENSIONS ----------
+[markdown-preview-enhanced]
+previewTheme = "github-dark.css"
+codeBlockTheme = "pojoaque.css"
+revealjsTheme = "beige.css"
+
+[codesnap]
+showWindowControls = false
+backgroundColor = "rgba(255, 255, 255, 0)"
+boxShadow = "rgba(0, 0, 0, 0.3) 0px 15px 20px"
+
+[catppuccin-icons]
+hidesExplorerArrows = true
