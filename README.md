@@ -38,3 +38,5 @@ NICE TOOLS:
 
 NOTES:
 - eza is not zsh-plugin - it's brew installed
+- same goes for fzf
+- project uses gnu stow, just cd to project root and type `stow dotfiles`
