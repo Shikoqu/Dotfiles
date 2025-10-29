@@ -1,0 +1,43 @@
+{
+  "editor.fontSize": 14,
+  "editor.linkedEditing": true,
+  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "catppuccin-icons.hidesExplorerArrows": true,
+  "editor.fontFamily": "'FiraCode Nerd Font Mono'",
+  "terminal.integrated.fontFamily": "'FiraCode Nerd Font Mono'",
+  "files.autoSave": "onFocusChange",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": false,
+  "editor.formatOnSaveMode": "modificationsIfAvailable",
+  "editor.inlayHints.enabled": "off",
+  "editor.inlayHints.padding": true,
+  "editor.fontLigatures": true,
+  "editor.minimap.renderCharacters": false,
+  "editor.semanticHighlighting.enabled": true,
+  "editor.snippetSuggestions": "top",
+  "editor.suggestSelection": "recentlyUsedByPrefix",
+  "editor.autoClosingOvertype": "always",
+  "editor.bracketPairColorization.enabled": false,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
+  "workbench.activityBar.location": "top",
+  "terminal.integrated.scrollback": 10000,
+  "markdown-preview-enhanced.previewTheme": "github-dark.css",
+  "markdown-preview-enhanced.codeBlockTheme": "pojoaque.css",
+  "markdown-preview-enhanced.revealjsTheme": "beige.css",
+  "codesnap.showWindowControls": false,
+  "codesnap.backgroundColor": "rgba(255, 255, 255, 0)",
+  "codesnap.boxShadow": "rgba(0, 0, 0, 0.3) 0px 15px 20px",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "mssql.connectionGroups": [
+    {
+      "name": "ROOT",
+      "id": "3FBCFAD8-5BB3-4205-A365-3E4C6A86DA49"
+    }
+  ],
+  "accessibility.signals.lineHasInlineSuggestion": {
+    "sound": "off"
+  },
+  "accessibility.signalOptions.volume": 0
+}
