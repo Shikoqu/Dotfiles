@@ -10,6 +10,14 @@
 
 A place where most developers spend too much time to save a few minutes in the future...
 
+## Prerequisits
+- brew
+  - antidote
+  - eza
+  - fzf
+  - fzf-tab
+  - zoxide
+
 <!-- TODO -->
 TOOLS TO USE:
 - [antidote](https://github.com/getantidote/antidote) - cli plugin manager

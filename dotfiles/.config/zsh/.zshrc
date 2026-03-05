@@ -7,8 +7,23 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Lazy-load (autoload) Zsh function files from a directory.
+ZFUNCDIR=${ZDOTDIR:-$HOME}/.zfunctions
+fpath=($ZFUNCDIR $fpath)
+autoload -Uz $ZFUNCDIR/*(.:t)
+
+[[ ! -f ${ZDOTDIR:-$HOME}/.zstyles ]] || source ${ZDOTDIR:-$HOME}/.zstyles
+
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
-antidote load $DOTFILES/zsh/.plugins.txt
+antidote load
+
+load-zshrc-d
+
+# Restore FZF Key bindings
+zvm_after_init() {
+  source "$(antidote home)/junegunn/fzf/shell/completion.zsh"
+  source "$(antidote home)/junegunn/fzf/shell/key-bindings.zsh"
+}
 
 # To customize prompt, run `p10k configure` or directly edit the file
 [[ ! -f ${ZDOTDIR:-~}/p10k.zsh ]] || source ${ZDOTDIR:-~}/p10k.zsh
