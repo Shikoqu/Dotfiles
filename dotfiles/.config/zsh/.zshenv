@@ -7,7 +7,9 @@ export XDG_CACHE_HOME=${XDG_CACHE_HOME:-$HOME/.cache}
 export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-$HOME/.config}
 export XDG_RUNTIME_DIR=${XDG_RUNTIME_DIR:-$HOME/.xdg}
 
-export HISTFILE="$XDG_STATE_HOME/zsh/history"
+# fzf (used by key bindings loaded via antidote; must be set before fzf runs)
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border --inline-info'
+export FZF_CTRL_R_OPTS='--preview "echo {}" --preview-window down:3:hidden:wrap --bind "?:toggle-preview"'
 
 # uv
 export PATH="$HOME/.local/bin:$PATH"
@@ -20,4 +22,4 @@ export NPM_CONFIG_TMP="$XDG_RUNTIME_DIR/npm"
 # rust
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
-source "$XDG_DATA_HOME/cargo/env"
+[[ -f "$XDG_DATA_HOME/cargo/env" ]] && source "$XDG_DATA_HOME/cargo/env"

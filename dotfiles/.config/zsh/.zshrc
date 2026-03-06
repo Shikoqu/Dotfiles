@@ -14,16 +14,10 @@ autoload -Uz $ZFUNCDIR/*(.:t)
 
 [[ ! -f ${ZDOTDIR:-$HOME}/.zstyles ]] || source ${ZDOTDIR:-$HOME}/.zstyles
 
-source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
-antidote load
-
 load-zshrc-d
 
-# Restore FZF Key bindings
-zvm_after_init() {
-  source "$(antidote home)/junegunn/fzf/shell/completion.zsh"
-  source "$(antidote home)/junegunn/fzf/shell/key-bindings.zsh"
-}
+source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+antidote load
 
 # To customize prompt, run `p10k configure` or directly edit the file
 [[ ! -f ${ZDOTDIR:-~}/p10k.zsh ]] || source ${ZDOTDIR:-~}/p10k.zsh

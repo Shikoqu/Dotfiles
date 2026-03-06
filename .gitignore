@@ -1,8 +1,7 @@
-.DS_Store
+prompts/
 .zcompcache/
 .zsh_sessions/
 .zcompdump*
-.zsh_history
 .zplugins.zsh
 *.bak
 *.local

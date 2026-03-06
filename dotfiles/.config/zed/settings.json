@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "buffer_font_family": "FiraCode Nerd Font Mono",
   "languages": {
     "TOML": {
       "prettier": {},
@@ -49,7 +50,7 @@
     "thumb_border": "none",
     "thumb": "hover",
     "display_in": "active_editor",
-    "show": "always",
+    "show": "never",
   },
   "scrollbar": {
     "show": "system",
@@ -68,7 +69,7 @@
   "rounded_selection": true,
   "ui_font_weight": 400.0,
   "icon_theme": "Colored Zed Icons Theme Dark",
-  "ui_font_size": 16,
-  "buffer_font_size": 15,
+  "ui_font_size": 14,
+  "buffer_font_size": 14,
   "theme": "Kanagawa Wave",
 }
