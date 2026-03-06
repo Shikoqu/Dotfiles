@@ -15,6 +15,8 @@ default-root-container-orientation = 'auto'
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 on-focus-changed = ['move-mouse window-lazy-center']
 
+persistent-workspaces = ["W", "E", "R", "S", "D", "F"]
+
 accordion-padding = 30
 [gaps]
   inner.horizontal = 8
@@ -55,7 +57,7 @@ accordion-padding = 30
   ctrl-shift-right = 'join-with right'
 
   ctrl-u = 'layout accordion horizontal vertical'
-  ctrl-o = 'layout tiles horizontal vertical' # ó
+  ctrl-o = 'layout tiles horizontal vertical'
   ctrl-alt-space = 'layout floating tiling'
 
   ctrl-p = 'fullscreen'
@@ -64,27 +66,23 @@ accordion-padding = 30
   # should be supported at all https://github.com/nikitabobko/AeroSpace/issues/5
   # alt-a = 'focus parent'
 
-  ctrl-q = 'workspace Q'
   ctrl-w = 'workspace W'
-  ctrl-e = 'workspace E' # ę
+  ctrl-e = 'workspace E'
   ctrl-r = 'workspace R'
-  ctrl-a = 'workspace A' # ą
-  ctrl-s = 'workspace S' # ś
+  ctrl-s = 'workspace S'
   ctrl-d = 'workspace D'
   ctrl-f = 'workspace F'
 
-  ctrl-alt-q = 'move-node-to-workspace Q'
   ctrl-alt-w = 'move-node-to-workspace W'
-  ctrl-alt-e = 'move-node-to-workspace E' #
+  ctrl-alt-e = 'move-node-to-workspace E'
   ctrl-alt-r = 'move-node-to-workspace R'
-  ctrl-alt-a = 'move-node-to-workspace A' #
-  ctrl-alt-s = 'move-node-to-workspace S' #
+  ctrl-alt-s = 'move-node-to-workspace S'
   ctrl-alt-d = 'move-node-to-workspace D'
   ctrl-alt-f = 'move-node-to-workspace F'
 
-  ctrl-alt-c = 'reload-config' # Ć
+  ctrl-alt-c = 'reload-config'
 
-  ctrl-alt-x = 'mode resize' # Ź
+  ctrl-alt-x = 'mode resize'
 
 [mode.resize.binding]
   ctrl-left_ = 'resize width -50'
