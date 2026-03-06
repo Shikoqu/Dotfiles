@@ -32,12 +32,6 @@ accordion-padding = 30
   right = 'l'
 
 [mode.main.binding]
-  alt-enter = '''exec-and-forget osascript -e '
-  tell application "Terminal"
-    do script
-    activate
-  end tell'
-  '''
 
   ctrl-left_ = 'focus --boundaries-action wrap-around-the-workspace left'
   ctrl-down_ = 'focus --boundaries-action wrap-around-the-workspace down'
@@ -77,6 +71,10 @@ accordion-padding = 30
   ctrl-alt-s = 'move-node-to-workspace S'
   ctrl-alt-d = 'move-node-to-workspace D'
   ctrl-alt-f = 'move-node-to-workspace F'
+
+  # disable hide application or other macOS shortcuts
+  cmd-h = []
+  cmd-alt-h = []
 
   ctrl-alt-c = 'reload-config'
 
