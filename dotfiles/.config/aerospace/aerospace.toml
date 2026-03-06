@@ -1,13 +1,12 @@
-# Reference: https://github.com/i3/i3/blob/next/etc/config
+# ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !
+# ! REMEMBER ABOUT POLISH LETTERS !
+# ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !
 
 config-version = 2
 
 start-at-login = true
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
-after-startup-command = [
-    'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0'
-]
 
 persistent-workspaces = []
 
@@ -30,7 +29,7 @@ accordion-padding = 30
   up___ = 'i'
   down_ = 'k'
   left_ = 'j'
-  right = 'l' # ł
+  right = 'l'
 
 [mode.main.binding]
   alt-enter = '''exec-and-forget osascript -e '
@@ -40,57 +39,57 @@ accordion-padding = 30
   end tell'
   '''
 
-  alt-left_ = 'focus --boundaries-action wrap-around-the-workspace left'
-  alt-down_ = 'focus --boundaries-action wrap-around-the-workspace down'
-  alt-up___ = 'focus --boundaries-action wrap-around-the-workspace up'
-  alt-right = 'focus --boundaries-action wrap-around-the-workspace right'
+  ctrl-left_ = 'focus --boundaries-action wrap-around-the-workspace left'
+  ctrl-down_ = 'focus --boundaries-action wrap-around-the-workspace down'
+  ctrl-up___ = 'focus --boundaries-action wrap-around-the-workspace up'
+  ctrl-right = 'focus --boundaries-action wrap-around-the-workspace right'
 
-  alt-shift-left_ = 'move left'
-  alt-shift-down_ = 'move down'
-  alt-shift-up___ = 'move up'
-  alt-shift-right = 'move right'
+  ctrl-alt-left_ = 'move left'
+  ctrl-alt-down_ = 'move down'
+  ctrl-alt-up___ = 'move up'
+  ctrl-alt-right = 'move right'
 
   ctrl-shift-left_ = 'join-with left'
   ctrl-shift-down_ = 'join-with down'
   ctrl-shift-up___ = 'join-with up'
   ctrl-shift-right = 'join-with right'
 
-  alt-u = 'layout accordion horizontal vertical'
-  alt-o = 'layout tiles horizontal vertical' # ó
-  alt-shift-space = 'layout floating tiling'
+  ctrl-u = 'layout accordion horizontal vertical'
+  ctrl-o = 'layout tiles horizontal vertical' # ó
+  ctrl-alt-space = 'layout floating tiling'
 
-  alt-p = 'fullscreen'
+  ctrl-p = 'fullscreen'
 
   # `focus parent`/`focus child` are not yet supported, and it's not clear whether they
   # should be supported at all https://github.com/nikitabobko/AeroSpace/issues/5
   # alt-a = 'focus parent'
 
-  alt-q = 'workspace Q'
-  alt-w = 'workspace W'
-  alt-e = 'workspace E' # ę
-  alt-r = 'workspace R'
-  alt-a = 'workspace A' # ą
-  alt-s = 'workspace S' # ś
-  alt-d = 'workspace D'
-  alt-f = 'workspace F'
+  ctrl-q = 'workspace Q'
+  ctrl-w = 'workspace W'
+  ctrl-e = 'workspace E' # ę
+  ctrl-r = 'workspace R'
+  ctrl-a = 'workspace A' # ą
+  ctrl-s = 'workspace S' # ś
+  ctrl-d = 'workspace D'
+  ctrl-f = 'workspace F'
 
-  alt-shift-q = 'move-node-to-workspace Q'
-  alt-shift-w = 'move-node-to-workspace W'
-  alt-shift-e = 'move-node-to-workspace E'
-  alt-shift-r = 'move-node-to-workspace R'
-  alt-shift-a = 'move-node-to-workspace A'
-  alt-shift-s = 'move-node-to-workspace S'
-  alt-shift-d = 'move-node-to-workspace D'
-  alt-shift-f = 'move-node-to-workspace F'
+  ctrl-alt-q = 'move-node-to-workspace Q'
+  ctrl-alt-w = 'move-node-to-workspace W'
+  ctrl-alt-e = 'move-node-to-workspace E' #
+  ctrl-alt-r = 'move-node-to-workspace R'
+  ctrl-alt-a = 'move-node-to-workspace A' #
+  ctrl-alt-s = 'move-node-to-workspace S' #
+  ctrl-alt-d = 'move-node-to-workspace D'
+  ctrl-alt-f = 'move-node-to-workspace F'
 
-  alt-shift-c = 'reload-config' # Ć
+  ctrl-alt-c = 'reload-config' # Ć
 
-  alt-shift-x = 'mode resize' # Ź
+  ctrl-alt-x = 'mode resize' # Ź
 
 [mode.resize.binding]
-  alt-left_ = 'resize width -50'
-  alt-down_ = 'resize height +50'
-  alt-up___ = 'resize height -50'
-  alt-right = 'resize width +50'
+  ctrl-left_ = 'resize width -50'
+  ctrl-down_ = 'resize height +50'
+  ctrl-up___ = 'resize height -50'
+  ctrl-right = 'resize width +50'
   enter = 'mode main'
   esc = 'mode main'
