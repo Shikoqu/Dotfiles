@@ -1,12 +1,11 @@
+# Dotfiles
+
 ```
     __         __    ___ __ __               TM        ╱|、_
 .--|  |.-----.|  |_.'  _|__|  |.-----.-----.          (` - /
 |  _  ||  _  ||   _|   _|  |  ||  -__|__ --|          |、⁻ 〵   ,
 |_____||_____||____|__| |__|__||_____|_____|          じし _,)ノ
 ```
-
-
-# Dotfiles
 
 A place where most developers spend too much time to save a few minutes in the future...
 
