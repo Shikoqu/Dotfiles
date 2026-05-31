@@ -1,17 +1,10 @@
 # ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !
 # ! REMEMBER ABOUT POLISH LETTERS !
 # ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !
-
 config-version = 2
-
 start-at-login = true
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
-
-after-startup-command = [
-  # requires FelixKratz JankyBorders
-  'exec-and-forget borders active_color=0xf5e1fee4 inactive_color=0xff494d64 width=5.0'
-]
 
 default-root-container-orientation = 'auto'
 
@@ -19,6 +12,13 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 on-focus-changed = ['move-mouse window-lazy-center']
 
 persistent-workspaces = ["W", "E", "R", "S", "D", "F"]
+[workspace-to-monitor-force-assignment]
+  W = 'main'
+  E = 'main'
+  R = 'main'
+  S = ['secondary', 'main']
+  D = ['secondary', 'main']
+  F = ['secondary', 'main']
 
 accordion-padding = 30
 [gaps]
@@ -26,7 +26,7 @@ accordion-padding = 30
   inner.vertical =   8
   outer.left =       8
   outer.bottom =     8
-  outer.top =        4
+  outer.top =        [{ monitor."built-in.*" = 2 }, 8]
   outer.right =      8
 
 # Define my fancy unicorn key notation
@@ -57,11 +57,7 @@ accordion-padding = 30
   ctrl-o = 'layout tiles horizontal vertical'
   ctrl-alt-space = 'layout floating tiling'
 
-  ctrl-p = 'fullscreen'
-
-  # `focus parent`/`focus child` are not yet supported, and it's not clear whether they
-  # should be supported at all https://github.com/nikitabobko/AeroSpace/issues/5
-  # alt-a = 'focus parent'
+  ctrl-p = 'macos-native-fullscreen'
 
   ctrl-w = 'workspace W'
   ctrl-e = 'workspace E'
@@ -85,6 +81,8 @@ accordion-padding = 30
 
   ctrl-alt-x = 'mode resize'
 
+##################################################
+
 [mode.resize.binding]
   ctrl-left_ = 'resize width -50'
   ctrl-down_ = 'resize height +50'
@@ -92,3 +90,17 @@ accordion-padding = 30
   ctrl-right = 'resize width +50'
   enter = 'mode main'
   esc = 'mode main'
+
+##################################################
+
+[[on-window-detected]] # Preview
+  if.app-id = 'com.apple.Preview'
+  run = 'layout floating'
+
+[[on-window-detected]] # AppCleaner
+  if.app-id = 'net.freemacsoft.AppCleaner'
+  run = 'layout floating'
+
+[[on-window-detected]] # Passwords
+  if.app-id = 'com.apple.Passwords'
+  run = 'layout floating'

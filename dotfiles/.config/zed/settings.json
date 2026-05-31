@@ -7,6 +7,15 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "diff_view_style": "unified",
+  "agent": {
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "git_panel": {
+    "dock": "left"
+  },
   "buffer_font_family": "FiraCode Nerd Font Mono",
   "languages": {
     "TOML": {
@@ -25,6 +34,7 @@
     "dock": "left",
   },
   "outline_panel": {
+    "dock": "left",
     "button": true,
   },
   "terminal": {
@@ -64,7 +74,7 @@
   },
   "scroll_beyond_last_line": "vertical_scroll_margin",
   "autosave": "on_focus_change",
-  "restore_on_startup": "launchpad",
+  "restore_on_startup": "last_session",
   "show_wrap_guides": true,
   "rounded_selection": true,
   "ui_font_weight": 400.0,
