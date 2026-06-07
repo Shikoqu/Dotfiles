@@ -11,14 +11,14 @@ default-root-container-orientation = 'auto'
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 on-focus-changed = ['move-mouse window-lazy-center']
 
-persistent-workspaces = ["W", "E", "R", "S", "D", "F"]
+persistent-workspaces = ["🍷", "🍸", "🍹", "🦀", "🪶", "🦋"]
 [workspace-to-monitor-force-assignment]
-  W = 'main'
-  E = 'main'
-  R = 'main'
-  S = ['secondary', 'main']
-  D = ['secondary', 'main']
-  F = ['secondary', 'main']
+  '🍷' = 'main'
+  '🍸' = 'main'
+  '🍹' = 'main'
+  '🦀' = ['secondary', 'main']
+  '🪶' = ['secondary', 'main']
+  '🦋' = ['secondary', 'main']
 
 accordion-padding = 30
 [gaps]
@@ -35,6 +35,8 @@ accordion-padding = 30
   down_ = 'k'
   left_ = 'j'
   right = 'l'
+  # meh = 'ctrl-alt-cmd'
+  # hyper = 'shift-ctrl-alt-cmd'
 
 [mode.main.binding]
 
@@ -53,25 +55,61 @@ accordion-padding = 30
   ctrl-shift-up___ = 'join-with up'
   ctrl-shift-right = 'join-with right'
 
-  ctrl-u = 'layout accordion horizontal vertical'
-  ctrl-o = 'layout tiles horizontal vertical'
+  ctrl-u = 'layout horizontal vertical'
+  ctrl-o = 'layout tiles accordion'
   ctrl-alt-space = 'layout floating tiling'
 
   ctrl-p = 'macos-native-fullscreen'
 
-  ctrl-w = 'workspace W'
-  ctrl-e = 'workspace E'
-  ctrl-r = 'workspace R'
-  ctrl-s = 'workspace S'
-  ctrl-d = 'workspace D'
-  ctrl-f = 'workspace F'
+  ctrl-w = "workspace 🍷"
+  ctrl-e = "workspace 🍸"
+  ctrl-r = "workspace 🍹"
+  ctrl-s = "workspace 🦀"
+  ctrl-d = "workspace 🪶"
+  ctrl-f = "workspace 🦋"
 
-  ctrl-alt-w = 'move-node-to-workspace W'
-  ctrl-alt-e = 'move-node-to-workspace E'
-  ctrl-alt-r = 'move-node-to-workspace R'
-  ctrl-alt-s = 'move-node-to-workspace S'
-  ctrl-alt-d = 'move-node-to-workspace D'
-  ctrl-alt-f = 'move-node-to-workspace F'
+  ctrl-alt-w = "move-node-to-workspace 🍷"
+  ctrl-alt-e = "move-node-to-workspace 🍸"
+  ctrl-alt-r = "move-node-to-workspace 🍹"
+  ctrl-alt-s = "move-node-to-workspace 🦀"
+  ctrl-alt-d = "move-node-to-workspace 🪶"
+  ctrl-alt-f = "move-node-to-workspace 🦋"
+
+  # chocofi layout
+  ctrl-alt-cmd-a = 'focus left'
+  ctrl-alt-cmd-e = 'focus up'
+  ctrl-alt-cmd-h = 'focus down'
+  ctrl-alt-cmd-i = 'focus right'
+
+  ctrl-alt-cmd-o = 'move left'
+  ctrl-alt-cmd-y = 'move down'
+  ctrl-alt-cmd-k = 'move up'
+  ctrl-alt-cmd-j = 'move right'
+
+  ctrl-alt-cmd-quote = 'join-with left'
+  ctrl-alt-cmd-u = 'join-with up'
+  ctrl-alt-cmd-p = 'join-with down'
+  ctrl-alt-cmd-q = 'join-with right'
+
+  ctrl-alt-cmd-semicolon = 'layout horizontal vertical'
+  ctrl-alt-cmd-period = 'layout tiles accordion'
+  ctrl-alt-cmd-comma = 'layout floating tiling'
+
+  ctrl-alt-cmd-f = 'macos-native-fullscreen'
+
+  ctrl-alt-cmd-s = "workspace 🍷"
+  ctrl-alt-cmd-n = "workspace 🍸"
+  ctrl-alt-cmd-t = "workspace 🍹"
+  ctrl-alt-cmd-w = "workspace 🦀"
+  ctrl-alt-cmd-m = "workspace 🪶"
+  ctrl-alt-cmd-d = "workspace 🦋"
+
+  shift-ctrl-alt-cmd-s = "move-node-to-workspace 🍷"
+  shift-ctrl-alt-cmd-n = "move-node-to-workspace 🍸"
+  shift-ctrl-alt-cmd-t = "move-node-to-workspace 🍹"
+  shift-ctrl-alt-cmd-w = "move-node-to-workspace 🦀"
+  shift-ctrl-alt-cmd-m = "move-node-to-workspace 🪶"
+  shift-ctrl-alt-cmd-d = "move-node-to-workspace 🦋"
 
   # disable hide application or other macOS shortcuts
   cmd-h = []
