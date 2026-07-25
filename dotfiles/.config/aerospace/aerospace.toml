@@ -29,31 +29,26 @@ accordion-padding = 30
   outer.top =        [{ monitor."built-in.*" = 2 }, 8]
   outer.right =      8
 
-# Define my fancy unicorn key notation
-[key-mapping.key-notation-to-key-code]
-  null = '_'
-  # meh = 'ctrl-alt-cmd'
-  # hyper = 'shift-ctrl-alt-cmd'
+##################################################
 
 [mode.main.binding]
-
-  ctrl-j = 'focus --boundaries-action wrap-around-the-workspace left'
-  ctrl-k  = 'focus --boundaries-action wrap-around-the-workspace down'
-  ctrl-i    = 'focus --boundaries-action wrap-around-the-workspace up'
-  ctrl-l = 'focus --boundaries-action wrap-around-the-workspace right'
+  ctrl-j = 'focus --boundaries all-monitors-outer-frame left'
+  ctrl-k = 'focus --boundaries all-monitors-outer-frame down'
+  ctrl-i = 'focus --boundaries all-monitors-outer-frame up'
+  ctrl-l = 'focus --boundaries all-monitors-outer-frame right'
 
   ctrl-alt-j = 'move left'
-  ctrl-alt-k  = 'move down'
-  ctrl-alt-i    = 'move up'
+  ctrl-alt-k = 'move down'
+  ctrl-alt-i = 'move up'
   ctrl-alt-l = 'move right'
 
   ctrl-shift-j = 'join-with left'
-  ctrl-shift-k  = 'join-with down'
-  ctrl-shift-i    = 'join-with up'
+  ctrl-shift-k = 'join-with down'
+  ctrl-shift-i = 'join-with up'
   ctrl-shift-l = 'join-with right'
 
-  ctrl-u = 'layout horizontal vertical'
-  ctrl-o = 'layout tiles accordion'
+  ctrl-u         = 'layout horizontal vertical'
+  ctrl-o         = 'layout tiles accordion'
   ctrl-alt-space = 'layout floating tiling'
 
   ctrl-p = 'macos-native-fullscreen'
@@ -79,11 +74,11 @@ accordion-padding = 30
   ctrl-alt-c = 'reload-config'
 
   ctrl-alt-z = 'mode chocofi'
-  ctrl-alt-x = 'mode resize'
+  ctrl-alt-x = 'mode resize-main'
 
 ##################################################
 
-[mode.chocofi.bindings]
+[mode.chocofi.binding]
   ctrl-alt-cmd-a = 'focus left'
   ctrl-alt-cmd-e = 'focus up'
   ctrl-alt-cmd-h = 'focus down'
@@ -95,13 +90,13 @@ accordion-padding = 30
   ctrl-alt-cmd-j = 'move right'
 
   ctrl-alt-cmd-quote = 'join-with left'
-  ctrl-alt-cmd-u = 'join-with up'
-  ctrl-alt-cmd-p = 'join-with down'
-  ctrl-alt-cmd-q = 'join-with right'
+  ctrl-alt-cmd-u     = 'join-with up'
+  ctrl-alt-cmd-p     = 'join-with down'
+  ctrl-alt-cmd-q     = 'join-with right'
 
   ctrl-alt-cmd-semicolon = 'layout horizontal vertical'
-  ctrl-alt-cmd-period = 'layout tiles accordion'
-  ctrl-alt-cmd-comma = 'layout floating tiling'
+  ctrl-alt-cmd-period    = 'layout tiles accordion'
+  ctrl-alt-cmd-comma     = 'layout floating tiling'
 
   ctrl-alt-cmd-f = 'macos-native-fullscreen'
 
@@ -126,17 +121,25 @@ accordion-padding = 30
   ctrl-alt-c = 'reload-config'
 
   ctrl-alt-z = 'mode main'
-  ctrl-alt-x = 'mode resize'
+  ctrl-alt-x = 'mode resize-chocofi'
 
 ##################################################
 
-[mode.resize.binding]
+[mode.resize-main.binding]
   ctrl-j = 'resize width -50'
   ctrl-k = 'resize height +50'
   ctrl-i = 'resize height -50'
   ctrl-l = 'resize width +50'
   enter = 'mode main'
   esc = 'mode main'
+
+[mode.resize-chocofi.binding]
+  ctrl-a = 'resize width -50'
+  ctrl-e = 'resize height +50'
+  ctrl-h = 'resize height -50'
+  ctrl-i = 'resize width +50'
+  enter = 'mode chocofi'
+  esc = 'mode chocofi'
 
 ##################################################
 
