@@ -31,29 +31,26 @@ accordion-padding = 30
 
 # Define my fancy unicorn key notation
 [key-mapping.key-notation-to-key-code]
-  up___ = 'i'
-  down_ = 'k'
-  left_ = 'j'
-  right = 'l'
+  null = '_'
   # meh = 'ctrl-alt-cmd'
   # hyper = 'shift-ctrl-alt-cmd'
 
 [mode.main.binding]
 
-  ctrl-left_ = 'focus --boundaries-action wrap-around-the-workspace left'
-  ctrl-down_ = 'focus --boundaries-action wrap-around-the-workspace down'
-  ctrl-up___ = 'focus --boundaries-action wrap-around-the-workspace up'
-  ctrl-right = 'focus --boundaries-action wrap-around-the-workspace right'
+  ctrl-j = 'focus --boundaries-action wrap-around-the-workspace left'
+  ctrl-k  = 'focus --boundaries-action wrap-around-the-workspace down'
+  ctrl-i    = 'focus --boundaries-action wrap-around-the-workspace up'
+  ctrl-l = 'focus --boundaries-action wrap-around-the-workspace right'
 
-  ctrl-alt-left_ = 'move left'
-  ctrl-alt-down_ = 'move down'
-  ctrl-alt-up___ = 'move up'
-  ctrl-alt-right = 'move right'
+  ctrl-alt-j = 'move left'
+  ctrl-alt-k  = 'move down'
+  ctrl-alt-i    = 'move up'
+  ctrl-alt-l = 'move right'
 
-  ctrl-shift-left_ = 'join-with left'
-  ctrl-shift-down_ = 'join-with down'
-  ctrl-shift-up___ = 'join-with up'
-  ctrl-shift-right = 'join-with right'
+  ctrl-shift-j = 'join-with left'
+  ctrl-shift-k  = 'join-with down'
+  ctrl-shift-i    = 'join-with up'
+  ctrl-shift-l = 'join-with right'
 
   ctrl-u = 'layout horizontal vertical'
   ctrl-o = 'layout tiles accordion'
@@ -75,7 +72,18 @@ accordion-padding = 30
   ctrl-alt-d = "move-node-to-workspace 🦋"
   ctrl-alt-f = "move-node-to-workspace 🪶"
 
-  # chocofi layout
+  # disable hide application or other macOS shortcuts
+  cmd-h = []
+  cmd-alt-h = []
+
+  ctrl-alt-c = 'reload-config'
+
+  ctrl-alt-z = 'mode chocofi'
+  ctrl-alt-x = 'mode resize'
+
+##################################################
+
+[mode.chocofi.bindings]
   ctrl-alt-cmd-a = 'focus left'
   ctrl-alt-cmd-e = 'focus up'
   ctrl-alt-cmd-h = 'focus down'
@@ -117,15 +125,16 @@ accordion-padding = 30
 
   ctrl-alt-c = 'reload-config'
 
+  ctrl-alt-z = 'mode main'
   ctrl-alt-x = 'mode resize'
 
 ##################################################
 
 [mode.resize.binding]
-  ctrl-left_ = 'resize width -50'
-  ctrl-down_ = 'resize height +50'
-  ctrl-up___ = 'resize height -50'
-  ctrl-right = 'resize width +50'
+  ctrl-j = 'resize width -50'
+  ctrl-k = 'resize height +50'
+  ctrl-i = 'resize height -50'
+  ctrl-l = 'resize width +50'
   enter = 'mode main'
   esc = 'mode main'
 
