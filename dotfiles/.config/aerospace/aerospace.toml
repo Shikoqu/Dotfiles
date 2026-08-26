@@ -32,49 +32,49 @@ accordion-padding = 30
 ##################################################
 
 [mode.main.binding]
-  ctrl-j = 'focus --boundaries all-monitors-outer-frame left'
-  ctrl-k = 'focus --boundaries all-monitors-outer-frame down'
-  ctrl-i = 'focus --boundaries all-monitors-outer-frame up'
-  ctrl-l = 'focus --boundaries all-monitors-outer-frame right'
+  ctrl-alt-cmd-j         = 'focus --boundaries all-monitors-outer-frame left'
+  ctrl-alt-cmd-k         = 'focus --boundaries all-monitors-outer-frame up'
+  ctrl-alt-cmd-l         = 'focus --boundaries all-monitors-outer-frame down'
+  ctrl-alt-cmd-semicolon = 'focus --boundaries all-monitors-outer-frame right'
 
-  ctrl-alt-j = 'move left'
-  ctrl-alt-k = 'move down'
-  ctrl-alt-i = 'move up'
-  ctrl-alt-l = 'move right'
+  ctrl-alt-cmd-m         = 'move left'
+  ctrl-alt-cmd-comma     = 'move up'
+  ctrl-alt-cmd-period    = 'move down'
+  ctrl-alt-cmd-slash     = 'move right'
 
-  ctrl-shift-j = 'join-with left'
-  ctrl-shift-k = 'join-with down'
-  ctrl-shift-i = 'join-with up'
-  ctrl-shift-l = 'join-with right'
+  ctrl-alt-cmd-u         = 'join-with left'
+  ctrl-alt-cmd-i         = 'join-with up'
+  ctrl-alt-cmd-o         = 'join-with down'
+  ctrl-alt-cmd-p         = 'join-with right'
 
-  ctrl-u         = 'layout horizontal vertical'
-  ctrl-o         = 'layout tiles accordion'
-  ctrl-alt-space = 'layout floating tiling'
+  ctrl-alt-cmd-y = 'layout horizontal vertical'
+  ctrl-alt-cmd-h = 'layout tiles accordion'
+  ctrl-alt-cmd-n = 'layout floating tiling'
 
-  ctrl-p = 'macos-native-fullscreen'
+  ctrl-alt-cmd-g = 'macos-native-fullscreen'
 
-  ctrl-w = "workspace 🍷"
-  ctrl-e = "workspace 🍸"
-  ctrl-r = "workspace 🍹"
-  ctrl-s = "workspace 🦀"
-  ctrl-d = "workspace 🦋"
-  ctrl-f = "workspace 🪶"
+  ctrl-alt-cmd-w = "workspace 🍷"
+  ctrl-alt-cmd-e = "workspace 🍸"
+  ctrl-alt-cmd-r = "workspace 🍹"
+  ctrl-alt-cmd-s = "workspace 🦀"
+  ctrl-alt-cmd-d = "workspace 🦋"
+  ctrl-alt-cmd-f = "workspace 🪶"
 
-  ctrl-alt-w = "move-node-to-workspace 🍷"
-  ctrl-alt-e = "move-node-to-workspace 🍸"
-  ctrl-alt-r = "move-node-to-workspace 🍹"
-  ctrl-alt-s = "move-node-to-workspace 🦀"
-  ctrl-alt-d = "move-node-to-workspace 🦋"
-  ctrl-alt-f = "move-node-to-workspace 🪶"
+  ctrl-alt-cmd-shift-w = "move-node-to-workspace 🍷"
+  ctrl-alt-cmd-shift-e = "move-node-to-workspace 🍸"
+  ctrl-alt-cmd-shift-r = "move-node-to-workspace 🍹"
+  ctrl-alt-cmd-shift-s = "move-node-to-workspace 🦀"
+  ctrl-alt-cmd-shift-d = "move-node-to-workspace 🦋"
+  ctrl-alt-cmd-shift-f = "move-node-to-workspace 🪶"
 
   # disable hide application or other macOS shortcuts
   cmd-h = []
   cmd-alt-h = []
 
-  ctrl-alt-c = 'reload-config'
+  ctrl-alt-cmd-shift-c = 'reload-config'
 
-  ctrl-alt-z = 'mode chocofi'
-  ctrl-alt-x = 'mode resize-main'
+  ctrl-alt-cmd-shift-z = 'mode chocofi'
+  ctrl-alt-cmd-shift-x = 'mode resize-main'
 
 ##################################################
 
@@ -118,28 +118,28 @@ accordion-padding = 30
   cmd-h = []
   cmd-alt-h = []
 
-  ctrl-alt-c = 'reload-config'
+  ctrl-alt-cmd-shift-c = 'reload-config'
 
-  ctrl-alt-z = 'mode main'
-  ctrl-alt-x = 'mode resize-chocofi'
+  ctrl-alt-cmd-shift-z = 'mode main'
+  ctrl-alt-cmd-shift-x = 'mode resize-chocofi'
 
 ##################################################
 
 [mode.resize-main.binding]
-  ctrl-j = 'resize width -50'
-  ctrl-k = 'resize height +50'
-  ctrl-i = 'resize height -50'
-  ctrl-l = 'resize width +50'
+  ctrl-alt-cmd-j         = 'resize width -50'
+  ctrl-alt-cmd-k         = 'resize height +50'
+  ctrl-alt-cmd-l         = 'resize height -50'
+  ctrl-alt-cmd-semicolon = 'resize width +50'
   enter = 'mode main'
-  esc = 'mode main'
+  esc   = 'mode main'
 
 [mode.resize-chocofi.binding]
-  ctrl-a = 'resize width -50'
-  ctrl-e = 'resize height +50'
-  ctrl-h = 'resize height -50'
-  ctrl-i = 'resize width +50'
+  ctrl-alt-cmd-a = 'resize width -50'
+  ctrl-alt-cmd-e = 'resize height +50'
+  ctrl-alt-cmd-h = 'resize height -50'
+  ctrl-alt-cmd-i = 'resize width +50'
   enter = 'mode chocofi'
-  esc = 'mode chocofi'
+  esc   = 'mode chocofi'
 
 ##################################################
 
