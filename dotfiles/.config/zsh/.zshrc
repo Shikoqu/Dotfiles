@@ -10,7 +10,7 @@ fi
 # Lazy-load (autoload) Zsh function files from a directory.
 ZFUNCDIR=${ZDOTDIR:-$HOME}/.zfunctions
 fpath=($ZFUNCDIR $fpath)
-autoload -Uz $ZFUNCDIR/*(.:t)
+autoload -Uz $ZFUNCDIR/*(N-.:t)
 
 [[ ! -f ${ZDOTDIR:-$HOME}/.zstyles ]] || source ${ZDOTDIR:-$HOME}/.zstyles
 
