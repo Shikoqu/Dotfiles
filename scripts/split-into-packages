@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+shopt -s nullglob
+
+dotfiles="${HOME}/.dotfiles"
+config="${dotfiles}/dotfiles/.config"
+packages="${dotfiles}/packages"
+
+if [[ ! -d $config ]]; then
+  echo "$0: no $config" >&2
+  exit 1
+fi
+
+for src in "$config"/*/; do
+  package="$(basename "$src")"
+  dst="${packages}/${package}/.config/${package}"
+
+  if [[ -e $dst ]]; then
+    echo "skip ${package}: ${dst} already exists" >&2
+    continue
+  fi
+
+  mkdir -p "$(dirname "$dst")"
+  mv "$src" "$dst"
+  echo "moved ${package}"
+done

@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
+
+if (($# == 0)); then
+  echo "Usage: $0 [stow options] <package>..." >&2
+  echo "Available packages:" >&2
+  for package in "$root"/packages/*/; do
+    echo "  $(basename "$package")" >&2
+  done
+  exit 2
+fi
+
+# MacOS Finder litters these into every directory, where they become Stow conflicts.
+find "$root" -name .DS_Store -print -delete
+
+exec stow \
+  --no-folding \
+  --dir="$root/packages" \
+  --target="$HOME" \
+  "$@"
