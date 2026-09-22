@@ -7,6 +7,7 @@
 	defaultBranch = main
 
 [core]
+  editor = zed
 	pager = delta
 	excludesFile = ~/.config/git/ignore
 
@@ -14,16 +15,19 @@
 	diffFilter = delta --color-only
 
 [delta]
-	side-by-side = true
+	side-by-side = false
 
 [push]
 	default = matching
 
 [merge]
-	conflictstyle = diff3
+	conflictstyle = zdiff3
 
 [diff]
 	colorMoved = default
+
+[rerere]
+  enabled = true
 
 [alias]
 	# ! ADD
